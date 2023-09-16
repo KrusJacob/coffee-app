@@ -2,8 +2,6 @@ import SolimoImg from "../img/SolimoCoffee.png";
 import PrestoImg from "../img/PrestoCoffee.png";
 import AromisticoImg from "../img/AROMISTICOCoffee.png";
 
-console.log(SolimoImg);
-
 const data = [
   {
     name: "Solimo Coffee Beans 2 kg",
