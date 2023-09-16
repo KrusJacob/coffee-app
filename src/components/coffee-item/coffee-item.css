@@ -1,0 +1,37 @@
+.coffee-item {
+    padding: 22px 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+.coffee-item:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.coffee-item .descr {
+    margin-top: 14px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+
+    color: #000000;
+}
+.coffee-item .country,
+.coffee-item .price {
+    text-align: right;
+}
+.coffee-item .price {
+    margin: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.coffee-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 134px;
+}

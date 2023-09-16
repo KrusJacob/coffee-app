@@ -1,0 +1,10 @@
+.pleasure__header {
+    padding-top: 130px;
+    text-align: center;
+    color: #ffffff;
+    min-height: 280px;
+    background: url(bg/forYourPleasure.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

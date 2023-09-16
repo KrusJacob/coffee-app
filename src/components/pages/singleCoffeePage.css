@@ -1,0 +1,38 @@
+.single-coffee {
+    width: 860px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 420px;
+    gap: 55px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.single-coffee img {
+    width: 100%;
+    height: 100%;
+}
+
+.single-coffee-text {
+    text-align: center;
+}
+
+.single-coffee-title {
+    line-height: 35px;
+}
+
+.single-coffee-about {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.single-coffee-about span {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+}
+.single-coffee-about b {
+    line-height: 20px;
+    font-size: 24px;
+    line-height: 35px;
+}

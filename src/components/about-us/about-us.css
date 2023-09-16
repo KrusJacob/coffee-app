@@ -1,0 +1,14 @@
+.about-us {
+    text-align: center;
+    padding: 80px 0 100px 0;
+}
+
+.about-us p {
+    margin: 0 auto;
+    margin-top: 40px;
+    max-width: 590px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}

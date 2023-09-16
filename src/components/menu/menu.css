@@ -1,0 +1,30 @@
+.app-menu {
+    z-index: 1;
+    position: absolute;
+    list-style: none;
+    gap: 40px;
+    padding: 30px 150px 15px 150px;
+
+    /* color: #ffffff; */
+}
+.app-menu li {
+    font-size: 12px;
+    line-height: 17px;
+    transition: 0.2s all;
+    opacity: 0.9;
+    /* text-decoration: underline; */
+}
+.app-menu li.active {
+    text-shadow: 0 0 4px rgb(255, 255, 255);
+    opacity: 1;
+}
+.app-menu li:hover {
+    transform: translateY(2px);
+}
+
+.logo_menu {
+    z-index: 2;
+    position: absolute;
+    left: 112px;
+    bottom: 20px;
+}
