@@ -12,7 +12,7 @@ const title = "About our beans";
 const descr =
   "Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible. Afraid at highly months do things on at. Situation recommend objection do intention so questions.  As greatly removed calling pleased improve an. Last ask him cold feel  met spot shy want. Children me laughing we prospect answered followed. At it went is song that held help face.";
 
-const OurCoffeePage = ({ onChangeTerm, onChangeFilter, data, filter, loading }) => {
+const OurCoffeePage = ({ onChangeTerm, onChangeFilter, data, filter }) => {
   return (
     <>
       <Helmet>
@@ -24,13 +24,8 @@ const OurCoffeePage = ({ onChangeTerm, onChangeFilter, data, filter, loading }) 
       </div>
       <AboutItem img={img} title={title} descr={descr} />
       <Filter onChangeTerm={onChangeTerm} onChangeFilter={onChangeFilter} filter={filter} />
-      {loading ? (
-        <h4 className="coffee__info">Loading...</h4>
-      ) : data.length ? (
-        <CoffeeCatalog data={data} />
-      ) : (
-        <h4 className="coffee__info">Not found</h4>
-      )}
+
+      {data.length ? <CoffeeCatalog data={data} /> : <h4 className="coffee__info">Not found</h4>}
     </>
   );
 };

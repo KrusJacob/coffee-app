@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, HashRouter } from "react-router-dom";
 
 import { useFetching } from "../../hooks/useFetching";
 
@@ -9,24 +9,21 @@ import Footer from "../footer/footer";
 import Menu from "../menu/menu";
 import Content from "./Content";
 
-// import data from "../../resources/data";
 import bestCoffee from "../../resources/bestCoffee";
+import coffee from "../../resources/data";
 
 const App = () => {
   const [filter, setFilter] = useState("all");
   const [term, setTerm] = useState("");
 
-  const { request, loading } = useFetching();
-
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetchCoffee();
+    setCoffee();
   }, []);
 
-  async function fetchCoffee() {
-    const dataServer = await request("http://localhost:3001/coffee");
-    setData(dataServer);
+  async function setCoffee() {
+    setData(coffee);
   }
 
   const onChangeFilter = (ActiveFilter) => {
@@ -42,7 +39,6 @@ const App = () => {
       return items;
     } else {
       return items.filter((item) => item.name.toLowerCase().includes(term.toLowerCase()));
-      // return items.filter((item) => item.name.toLowerCase().indexOf(term.toLowerCase()) > -1);
     }
   };
 
@@ -57,23 +53,22 @@ const App = () => {
   const visibleData = searchOnText(filterData, term);
 
   return (
-    <Router>
+    <HashRouter>
       <div className="app">
         <Menu color="white"></Menu>
         <main>
           <Content
-            data={data}
+            data={coffee}
             bestCoffee={bestCoffee}
             visibleData={visibleData}
             onChangeFilter={onChangeFilter}
             onChangeTerm={onChangeTerm}
             filter={filter}
-            loading={loading}
           />
         </main>
         <Footer></Footer>
       </div>
-    </Router>
+    </HashRouter>
   );
 };
 

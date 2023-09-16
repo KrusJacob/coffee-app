@@ -6,6 +6,8 @@ const CoffeeItem = (props) => {
 
   const navigate = useNavigate();
 
+  console.log(img);
+
   const onClick = (id) => {
     navigate(`/${id}`);
   };

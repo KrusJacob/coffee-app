@@ -7,8 +7,8 @@ import "./singleCoffeePage.css";
 
 const SingleCoffeePage = ({ data }) => {
   const { coffeeId } = useParams();
-
-  const { img, country, descr, price, name } = data.filter((item) => item.id == coffeeId)[0];
+  console.log(data);
+  const { img, country, descr, price, name } = data.filter((item) => item.id == coffeeId);
 
   // const { img, country, descr, price } = props;
   return (
